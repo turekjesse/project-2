@@ -7,7 +7,6 @@ export default function Header( {apod, rovers: {rovers} } ) {
     const curiosityMax = rovers[0].max_sol
     const spiritMax = rovers[1].max_sol
     const opportunityMax = rovers[2].max_sol
-    const perseveranceMax = rovers[3].max_sol
     
 
     return (
