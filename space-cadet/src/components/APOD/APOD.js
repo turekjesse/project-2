@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react'
-import Card from 'react-bootstrap/Card'
+import { Card } from 'react-bootstrap/'
 import Loading from '../Loading/Loading'
 
 export default function APOD({match: {params: {date}}}) {
@@ -8,7 +8,7 @@ export default function APOD({match: {params: {date}}}) {
 
   const getAPOD = async () => {
       try {
-        const key = process.env.REACT_APP_APOD_KEY
+        const key = process.env.REACT_APP_NASA_KEY
         const apiEndPoint = `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${date}`
         const response = await fetch(apiEndPoint)
         const data = await response.json()
@@ -61,6 +61,7 @@ export default function APOD({match: {params: {date}}}) {
     }
 
     return (
+      <>
         <Card border="light" style={{ width: '100vw' }}>
             {/* <Card.Header>{apod.date}</Card.Header> */}
             <Card.Body>
@@ -73,5 +74,6 @@ export default function APOD({match: {params: {date}}}) {
                 </div>
             </Card.Body>
         </Card>
+        </>
     )
 }
