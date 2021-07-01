@@ -1,8 +1,8 @@
 import Globe from '../../Globe.svg'
-import Nav from 'react-bootstrap/Nav'
+import { Nav, NavDropdown, Dropdown } from 'react-bootstrap/'
 import { LinkContainer } from 'react-router-bootstrap'
 
-export default function Header({apod}) {
+export default function Header({ apod }) {
 
     return (
         <header>
@@ -15,12 +15,14 @@ export default function Header({apod}) {
                 <LinkContainer to="/">
                     <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={`/apod/${apod.date}`}>
-                    <Nav.Link>APOD</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/apods">
-                    <Nav.Link>APODS</Nav.Link>
-                </LinkContainer>
+                <NavDropdown onHover title="APODS" id="nav-dropdown">                    
+                    <LinkContainer to={`/apod/${apod.date}`}>
+                        <Nav.Link>Today's APOD</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/apods">
+                        <Nav.Link>Gallery View</Nav.Link>
+                    </LinkContainer>
+                </NavDropdown>
                 <LinkContainer to="/about">
                     <Nav.Link>About</Nav.Link>
                 </LinkContainer>
