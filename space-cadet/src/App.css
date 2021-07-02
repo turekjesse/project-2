@@ -30,17 +30,6 @@ a:hover{
   content:none !important;
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-auto-rows: minmax(min-content, max-content);
-  overflow: auto;
-  grid-gap: 1rem;
-  margin: 20px auto;
-  max-width: 95vw;
-  color:black
-}
-
 .card-image {
   border-radius: 3px 3px 0 0;
 }
@@ -80,7 +69,7 @@ iframe {
 }
 
 .explanation {
-  width:75vw;
+  width:80vw;
   text-align: left;
   margin: 20px auto;
 
@@ -133,7 +122,8 @@ iframe {
 }
 
 .copyright{
-  color:silver
+  color:silver;
+  font-size:10px;
 }
 
 .video-responsive {
@@ -305,4 +295,22 @@ iframe {
 /* Style your items */
 .masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 20px;
+}
+
+.apods-container{
+  margin-top:20px;
+}
+
+.form-group{
+  max-width:450px;
+}
+
+@media screen and (max-width: 450px) {
+ .explanation {
+   width:100%;
+ }
+
+ .about{
+   margin:0 20px;
+ }
 }
