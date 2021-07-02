@@ -2,6 +2,8 @@
 
 [Space Cadet](https://space-cadet.netlify.app/) Version: 1.0
 
+<img width="1280" alt="Space Cadet V1" src="https://user-images.githubusercontent.com/77644242/124290643-adba3f00-db21-11eb-8bba-9d4222672c92.png">
+
 ## Description
 
 Space Cadet is a modern take on NASA's infamous Astronomy Photo of the Day website, joined with a gallery of images from various Mars exploration missions.
