@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import Loading from '../Loading/Loading'
 import Masonry from 'react-masonry-css';
 import {Card, Form} from 'react-bootstrap'
 export default function Curiosity({ rovers, match: { params: { name, max_sol } } }) {
