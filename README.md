@@ -62,9 +62,11 @@ Some currently known bugs are:
 
 ## Future Version Features
 
-- [] Form functionality to query APODS by specific date and/or date range
-- [] Carousel functionality to go to previous/next APOD on detail view
-- [] Form functionality to query Rovers by Sol and Camera View
-- [] Rover photo detail view
-- [] Fullscreen view of HD photos
-- [] Dark & light theme switch 
+- [ ] Form functionality to query APODS by specific date and/or date range
+- [ ] Carousel functionality to go to previous/next APOD on detail view
+- [ ] Form functionality to query Rovers by Sol and Camera View
+- [ ] Rover photo detail view
+- [ ] Fullscreen view of HD photos
+- [ ] Dark & light theme switch
+- [ ] Dynamic color text (White or Black) on Home Jumbotron depending on background image contents.
+- [ ] Conditionally render iframe on Home component jumbotron if mediatype = video
