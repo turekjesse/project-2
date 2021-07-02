@@ -70,3 +70,4 @@ Some currently known bugs are:
 - [ ] Dark & light theme switch
 - [ ] Dynamic color text (White or Black) on Home Jumbotron depending on background image contents.
 - [ ] Conditionally render iframe on Home component jumbotron if mediatype = video
+- [ ] Footer component
