@@ -10,7 +10,13 @@ export default function Footer () {
             </LinkContainer>
             <div className="brand-footer">
                 <p>Images provided by</p>
-                <img className="nasa-logo" width="75" alt="NASA Worm logo (gray)" src={NASA_Worm_logo}/>
+                <a href="https://www.nasa.gov/">
+                    <img
+                        className="nasa-logo"
+                        width="75"
+                        alt="NASA Worm logo (gray)"
+                        src={NASA_Worm_logo}/>
+                </a>
             </div>
         </footer>
     )
