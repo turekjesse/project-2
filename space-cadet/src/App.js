@@ -14,6 +14,7 @@ import APODS from './components/APODS/APODS'
 import About from './components/About/About'
 import Loading from './components/Loading/Loading'
 import Rovers from './components/Rovers/Rovers'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -69,6 +70,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/rovers/:name/:max_sol" render={(routerProps) => <Rovers {...routerProps} rovers={rovers} />} />
       </main>
+      <Footer></Footer>
     </div>
   );
 }
