@@ -11,10 +11,12 @@ export default function APODS () {
     const getAPODS = async () => {
         try {
             const key = process.env.REACT_APP_NASA_KEY
+            // cannot get video thumbs by date range
             const apiEndPoint = `https://api.nasa.gov/planetary/apod?api_key=${key}&start_date=2021-06-01`
             const response = await fetch(apiEndPoint)
             const data = await response.json()
             setApods(data)
+            console.log(apiEndPoint)
         } catch (err) {
             console.log(err)
         }
@@ -38,18 +40,16 @@ export default function APODS () {
       }
     
     return (
-        <Masonry breakpointCols={breakpointColumnsObj} className="masonry-grid apods-container" columnClassName="masonry-grid_column"> 
+        <Masonry breakpointCols={breakpointColumnsObj} className="masonry-grid" columnClassName="masonry-grid_column"> 
             {
                 apods.slice(0).reverse().map((apod, idx) => {
                     const videoEmbed = (
                         <div className="video-responsive">
                             <iframe
-                                width="853"
-                                height="480"
                                 src={apod.url}
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
+                                allowFullScreen="true"
                                 title={apod.title}
                             />
                         </div>
@@ -60,8 +60,8 @@ export default function APODS () {
                     } else {
                         mediaDisplay = <img className="card-image" src={apod.url} alt={apod.title}/>
                     }
-                        return (
-                            <div>
+                    return (
+                        <div>
                             <Link to={`/apod/${apod.date}`} key={idx}>
                                 <Card>
                                     {mediaDisplay}
@@ -71,8 +71,8 @@ export default function APODS () {
                                     </Card.Body>
                                 </Card>
                             </Link>
-                            </div>
-                        )
+                        </div>
+                    )
                     }
                 )
             }
