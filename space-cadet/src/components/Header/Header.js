@@ -11,7 +11,7 @@ export default function Header( {apod, rovers: {rovers} } ) {
 
     return (
         <header>
-            <div className="brand-container">
+            <div className="brand-header flex-container">
                 <h1>Space</h1>
                 <img className="brand-logo spin-right" src={Globe} alt="Space Cadet Brand Logo" />
                 <h1>Cadet</h1>
@@ -20,7 +20,7 @@ export default function Header( {apod, rovers: {rovers} } ) {
                 <LinkContainer to="/">
                     <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
-                <NavDropdown title="APODS" id="nav-dropdown">                    
+                <NavDropdown title="APODs" id="nav-dropdown">                    
                     <LinkContainer to={`/apod/${apod.date}`}>
                         <Nav.Link>Today's APOD</Nav.Link>
                     </LinkContainer>
@@ -43,9 +43,6 @@ export default function Header( {apod, rovers: {rovers} } ) {
                         <Nav.Link>Perseverance</Nav.Link>
                     </LinkContainer> */}
                 </NavDropdown>
-                <LinkContainer to="/about">
-                    <Nav.Link>About</Nav.Link>
-                </LinkContainer>
             </Nav>
         </header>
     )
