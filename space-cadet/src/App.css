@@ -42,16 +42,28 @@ iframe {
   border-radius: 3px 3px 0 0;
 }
 
-.brand-container{
-  padding:20px 0 10px 0;
+.flex-container{
   display: flex;
   gap:10px;
   align-items: center;
   align-content: center;
+}
+
+.jumbotron {
+  color: white;
+  height: 92vh;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  border-radius: 0;
+}
+
+.brand-header {
+  padding:20px 0 10px 0;
   justify-content: center;
 }
 
-.brand-container h1, img {
+.brand-header > h1, img {
   display:inline
   }
 
@@ -63,10 +75,6 @@ iframe {
   animation-timing-function: linear;
 }
 
-.jumbotron {
-  color: white;
-  height: 100vh;
-}
 
 .explanation {
   width:80vw;
@@ -277,14 +285,14 @@ iframe {
 
 .about {
   gap:20px;
-  height: 75vh;
+  height: 73.5vh;
 }
 
 .masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  margin: 0 20px 30px 0; /* gutter size offset */
+  margin: 30px 20px 10px 0;
   width: auto;
 }
 .masonry-grid_column {
@@ -293,12 +301,8 @@ iframe {
 }
 
 /* Style your items */
-.masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+.masonry-grid_column > div {
   margin-bottom: 20px;
-}
-
-.apods-container{
-  margin-top:20px;
 }
 
 .form-group{
@@ -308,7 +312,23 @@ iframe {
 .dropdown-menu.show {
   background-color: #efefef !important;
   border: none;
-  /* opacity: 90%; */
+}
+
+footer {
+  height:8vh;
+  background-color: #e9e9e9;
+  justify-content: space-between;
+  padding:0 5%;
+}
+
+footer > a {
+  padding:0 !important;
+}
+
+.brand-footer > p {
+   display:inline;
+   font-size: 12px;
+   padding-right:12px;
 }
 
 @media screen and (max-width: 450px) {
