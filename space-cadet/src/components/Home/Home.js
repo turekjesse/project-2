@@ -15,14 +15,11 @@ export default function Home({apod}) {
         
         const jumbotronImage = {
             backgroundImage: `url(${imgURL})`,
-            backgroundSize: 'cover',
-            margin:0,
-            borderRadius:0,
         }
         
         return (
             <Jumbotron  style={jumbotronImage} title={apod.title}>
-                <h2>Astronomy Photo of the Day:</h2>
+                <h3>Astronomy Photo of the Day:</h3>
                 <p>{apod.title}</p>
             <LinkContainer to={`/apod/${apod.date}`}>
                 <Button variant="light">Learn more</Button>
