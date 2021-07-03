@@ -60,7 +60,7 @@ iframe {
   animation-name: spin;
   animation-duration: 10000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
 }
 
 .jumbotron {
@@ -303,6 +303,12 @@ iframe {
 
 .form-group{
   max-width:450px;
+}
+
+.dropdown-menu.show {
+  background-color: #efefef !important;
+  border: none;
+  /* opacity: 90%; */
 }
 
 @media screen and (max-width: 450px) {
