@@ -19,8 +19,8 @@ export default function Home({apod}) {
         
         return (
             <Jumbotron  style={jumbotronImage} title={apod.title}>
-                <h3>Astronomy Photo of the Day:</h3>
-                <p>{apod.title}</p>
+                <h4>Astronomy Photo of the Day:</h4>
+                <h5>{apod.title}</h5>
             <LinkContainer to={`/apod/${apod.date}`}>
                 <Button variant="light">Learn more</Button>
             </LinkContainer>
