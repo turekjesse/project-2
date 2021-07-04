@@ -35,8 +35,7 @@ export default function Curiosity({ rovers, match: { params: { name, max_sol } }
     if (roverImages.length === 0) {
         return (
             <div>
-
-                <Card.Body>
+                <Card.Body className="rovers">
                     <Card.Title>No Images Found, try again</Card.Title>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="exampleForm.ControlInput1">
@@ -45,6 +44,7 @@ export default function Curiosity({ rovers, match: { params: { name, max_sol } }
                         </Form.Group>
                     </Form>
                 </Card.Body>
+                <div className="filler"></div>
             </div>
         )
     }
@@ -58,7 +58,7 @@ export default function Curiosity({ rovers, match: { params: { name, max_sol } }
 
     return (
         <div>
-            <Card.Body>
+            <Card.Body className="rovers">
                 <Card.Title>Rover: {roverImages[0].rover.name}</Card.Title>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="exampleForm.ControlInput1">
