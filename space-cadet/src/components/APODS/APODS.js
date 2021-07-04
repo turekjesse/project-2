@@ -65,7 +65,7 @@ export default function APODS () {
                             <Link to={`/apod/${apod.date}`} key={idx}>
                                 <Card>
                                     {mediaDisplay}
-                                    <Card.Body>
+                                    <Card.Body className="apods">
                                         <Card.Title>{apod.title}</Card.Title>
                                         <Card.Text>{apod.date}</Card.Text>
                                     </Card.Body>
