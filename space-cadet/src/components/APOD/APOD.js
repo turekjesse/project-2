@@ -4,6 +4,7 @@ import Loading from '../Loading/Loading'
 
 export default function APOD({match: {params: {date}}}) {
 
+  console.log(date)
   const [apod, setApod] = useState([])
 
   const getAPOD = async () => {
@@ -62,9 +63,9 @@ export default function APOD({match: {params: {date}}}) {
 
     return (
       <>
-        <Card border="light" style={{ width: '100vw' }}>
+        <Card border="light">
             {/* <Card.Header>{apod.date}</Card.Header> */}
-            <Card.Body>
+            <Card.Body style={{margin: "auto", maxWidth: "1550px"}}>
                 <Card.Text>{date}</Card.Text>
                 <Card.Title>{apod.title}</Card.Title>
                 {mediaDisplay}

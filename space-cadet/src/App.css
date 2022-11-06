@@ -94,9 +94,9 @@ iframe {
 
 .explanation {
   width:80vw;
+  max-width: 1450px;
   text-align: left;
   margin: 20px auto;
-
 }
 
 .flex-column {
