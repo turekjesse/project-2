@@ -6,11 +6,43 @@ import Masonry from "react-masonry-css";
 
 export default function APODS() {
 
+  const valiDate = (date) => {
+    let dateSplit = date.split("-");
+    let newDate = dateSplit.map((d, i) => {
+      let dayNum = Number(d);
+      let newDayNum = dayNum - 7;
+      if (newDayNum < 10 && newDayNum > 0) {
+        console.log("0" + newDayNum.toString());
+        return "0" + dayNum.toString();
+      } else if (newDayNum < 0) {
+      }
+      return dayNum;
+    });
+    console.log(newDate);
+    const setDay = (day) => {};
+    // let dayNum = Number(dateSplit[dateSplit.length - 1]);
+    // let newDayNum = dayNum - 7;
+    // if (newDayNum < 10 && newDayNum > 0) {
+    //   console.log("0" + newDayNum.toString());
+    //   return "0" + dayNum.toString();
+    // } else if (newDayNum < 0) {
+    // }
+    // return console.log(date)
+  };
+
+  //   let startYr = new Date().getFullYear();
+  //   let startMth = new Date().getMonth();
+  //   let startDay = new Date().getDate();
   let currentDate = new Date().toISOString().split("T")[0];
+  //   let dfltStartDate = `${startYr}-${(startMth + 1)}-${startDay}`;
+  valiDate(currentDate);
 
   const [apods, setApods] = useState([]);
   const [startDate, setStartDate] = useState("2022-11-01");
   const [endDate, setEndDate] = useState(currentDate);
+
+  console.log(endDate);
+  console.log(startDate);
 
   const getAPODS = async (startDate, endDate) => {
     try {
@@ -42,7 +74,9 @@ export default function APODS() {
 
   return (
     <div>
-      <div style={{ margin: "20px auto", padding: "0 20px", maxWidth: "450px"}}>
+      <div
+        style={{ margin: "20px auto", padding: "0 20px", maxWidth: "450px" }}
+      >
         <Form
           onSubmit={(e) => {
             e.preventDefault();
@@ -56,10 +90,7 @@ export default function APODS() {
               Start&nbsp;Date:
             </Form.Label>
             <Col>
-              <Form.Group
-                style={{ padding: "0" }}                
-                controlId="formStartDate"
-              >
+              <Form.Group style={{ padding: "0" }} controlId="formStartDate">
                 <Form.Control
                   type="date"
                   placeholder="Start Date"
@@ -74,13 +105,11 @@ export default function APODS() {
               End&nbsp;Date:
             </Form.Label>
             <Col>
-              <Form.Group
-                style={{ padding: "0" }}                
-                controlId="formEndDate"
-              >
+              <Form.Group style={{ padding: "0" }} controlId="formEndDate">
                 <Form.Control
                   type="date"
                   min={startDate}
+                  max={currentDate}
                   placeholder="End Date"
                   onChange={(e) => setEndDate(e.target.value)}
                   defaultValue={endDate.toString()}
