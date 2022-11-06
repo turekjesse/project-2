@@ -4,11 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 export default function Header( {apod, rovers: {rovers} } ) {
 
-    const curiosityMax = rovers[0].max_sol
-    const spiritMax = rovers[1].max_sol
-    const opportunityMax = rovers[2].max_sol
-    
-
+    console.log(apod)
     return (
         <header>
             <div className="brand-header flex-container">
@@ -29,19 +25,19 @@ export default function Header( {apod, rovers: {rovers} } ) {
                     </LinkContainer>
                 </NavDropdown>
                 <NavDropdown title="Rovers" id="nav-dropdown">                    
-                    <LinkContainer to={`/rovers/curiosity/${curiosityMax}`}>
+                    <LinkContainer to={`/rovers/curiosity/${rovers[0].max_sol}`}>
                         <Nav.Link>Curiosity</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to={`/rovers/opportunity/${opportunityMax}`}>
+                    <LinkContainer to={`/rovers/opportunity/${ rovers[2].max_sol}`}>
                         <Nav.Link>Opportunity</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to={`/rovers/spirit/${spiritMax}`}>
+                    <LinkContainer to={`/rovers/spirit/${rovers[1].max_sol}`}>
                         <Nav.Link>Spirit</Nav.Link>
                     </LinkContainer>
                     {/* Perseverence endpoint empty */}
-                    {/* <LinkContainer to={`/rovers/perseverance/${perseveranceMax}`}>
+                     <LinkContainer to={`/rovers/perseverance/${rovers[3].max_sol}`}>
                         <Nav.Link>Perseverance</Nav.Link>
-                    </LinkContainer> */}
+                    </LinkContainer>
                 </NavDropdown>
             </Nav>
         </header>
